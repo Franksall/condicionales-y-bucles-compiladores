@@ -7,6 +7,7 @@
 
 .text
 main:
+#print string
         li $v0, 4
         la $a0, msg1
         syscall
@@ -19,9 +20,10 @@ main:
     	li $v0, 1
         syscall
     	move $t4, $a0
+#string t3=18
 	li $t3,18
     	# if $v0 (valor leido) igual a $t4(max)
-    	ble $t3, $t4, si# se usa si es <= 
+    	ble $t3, $t4, si      	# se usa si es <= 
 	else:
 		la $a0, msg3
 		b endsi
